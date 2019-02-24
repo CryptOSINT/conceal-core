@@ -1,4 +1,9 @@
 #define BUILD_COMMIT_ID "@VERSION@"
+<<<<<<< HEAD
 #define PROJECT_VERSION "5.2.3"
 #define PROJECT_VERSION_BUILD_NO "23"
+=======
+#define PROJECT_VERSION "5.2.0"
+#define PROJECT_VERSION_BUILD_NO "19"
+>>>>>>> parent of e7c6c11... Merge pull request #54 from ConcealNetwork/521
 #define PROJECT_VERSION_LONG PROJECT_VERSION "." PROJECT_VERSION_BUILD_NO "(" BUILD_COMMIT_ID ")"

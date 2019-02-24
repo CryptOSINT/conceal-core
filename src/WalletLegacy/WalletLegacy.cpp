@@ -1175,6 +1175,7 @@ void WalletLegacy::pushBalanceUpdatedEvents(std::deque<std::unique_ptr<WalletLeg
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Crypto::SecretKey WalletLegacy::getTxKey(Crypto::Hash& txid) {
   TransactionId ti = m_transactionsCache.findTransactionByHash(txid);
   WalletLegacyTransaction transaction;
@@ -1345,4 +1346,6 @@ std::string WalletLegacy::getReserveProof(const uint64_t &reserve, const std::st
 
 =======
 >>>>>>> parent of b57c58c... first commits
+=======
+>>>>>>> parent of e7c6c11... Merge pull request #54 from ConcealNetwork/521
 } //namespace CryptoNote

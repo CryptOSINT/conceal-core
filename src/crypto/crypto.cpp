@@ -285,6 +285,7 @@ namespace Crypto {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void crypto_ops::generate_tx_proof(const Hash &prefix_hash, const PublicKey &R, const PublicKey &A, const PublicKey &D, const SecretKey &r, Signature &sig) {
     // sanity check
     ge_p3 R_p3;
@@ -402,6 +403,8 @@ void crypto_ops::generate_tx_proof(const Hash &prefix_hash, const PublicKey &R, 
 
 =======
 >>>>>>> parent of b57c58c... first commits
+=======
+>>>>>>> parent of e7c6c11... Merge pull request #54 from ConcealNetwork/521
   static void hash_to_ec(const PublicKey &key, ge_p3 &res) {
     Hash h;
     ge_p2 point;

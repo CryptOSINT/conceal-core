@@ -142,6 +142,7 @@ public:
   virtual TransactionId findTransactionByTransferId(TransferId transferId) = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   virtual bool getSeed(std::string& electrum_words) = 0;
 >>>>>>> parent of 92b954a... basic work complete
@@ -149,6 +150,9 @@ public:
 =======
 
 >>>>>>> parent of b57c58c... first commits
+=======
+
+>>>>>>> parent of e7c6c11... Merge pull request #54 from ConcealNetwork/521
   virtual bool getTransaction(TransactionId transactionId, WalletLegacyTransaction& transaction) = 0;
   virtual bool getTransfer(TransferId transferId, WalletLegacyTransfer& transfer) = 0;
   virtual bool getDeposit(DepositId depositId, Deposit& deposit) = 0;

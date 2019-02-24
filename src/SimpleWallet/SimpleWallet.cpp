@@ -1227,6 +1227,7 @@ bool simple_wallet::stop_mining(const std::vector<std::string>& args)
   return true;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 bool simple_wallet::get_reserve_proof(const std::vector<std::string> &args)
 {
@@ -1333,6 +1334,8 @@ bool simple_wallet::get_tx_proof(const std::vector<std::string> &args)
 >>>>>>> parent of 92b954a... basic work complete
 =======
 >>>>>>> parent of e973fcf... rpc additions
+=======
+>>>>>>> parent of e7c6c11... Merge pull request #54 from ConcealNetwork/521
 //----------------------------------------------------------------------------------------------------
 void simple_wallet::initCompleted(std::error_code result) {
   if (m_initResultPromise.get() != nullptr) {
