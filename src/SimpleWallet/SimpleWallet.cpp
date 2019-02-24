@@ -671,8 +671,7 @@ simple_wallet::simple_wallet(System::Dispatcher& dispatcher, const CryptoNote::C
   m_consoleHandler.setHandler("save", boost::bind(&simple_wallet::save, this, _1), "Save wallet synchronized data");
   m_consoleHandler.setHandler("reset", boost::bind(&simple_wallet::reset, this, _1), "Discard cache data and start synchronizing from the start");
   m_consoleHandler.setHandler("help", boost::bind(&simple_wallet::help, this, _1), "Show this help");
-  m_consoleHandler.setHandler("exit", boost::bind(&simple_wallet::exit, this, _1), "Close wallet");  
-  m_consoleHandler.setHandler("get_reserve_proof", boost::bind(&simple_wallet::get_reserve_proof, this, _1), "all|<amount> [<message>] - Generate a signature proving that you own at least <amount>, optionally with a challenge string <message>. ");
+  m_consoleHandler.setHandler("exit", boost::bind(&simple_wallet::exit, this, _1), "Close wallet");
 }
 
 /* This function shows the number of outputs in the wallet
@@ -1228,6 +1227,7 @@ bool simple_wallet::stop_mining(const std::vector<std::string>& args)
 
   return true;
 }
+<<<<<<< HEAD
 
 bool simple_wallet::get_reserve_proof(const std::vector<std::string> &args)
 {
@@ -1329,6 +1329,8 @@ bool simple_wallet::get_tx_proof(const std::vector<std::string> &args)
   return true;
 }
 
+=======
+>>>>>>> parent of 92b954a... basic work complete
 //----------------------------------------------------------------------------------------------------
 void simple_wallet::initCompleted(std::error_code result) {
   if (m_initResultPromise.get() != nullptr) {

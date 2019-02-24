@@ -141,6 +141,10 @@ public:
 
   virtual TransactionId findTransactionByTransferId(TransferId transferId) = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  virtual bool getSeed(std::string& electrum_words) = 0;
+>>>>>>> parent of 92b954a... basic work complete
   virtual void getAccountKeys(AccountKeys& keys) = 0;
 =======
 
