@@ -28,23 +28,6 @@ namespace Crypto {
 #include "random.h"
   }
 
-  static inline unsigned char *operator &(EllipticCurvePoint &point) {
-    return &reinterpret_cast<unsigned char &>(point);
-  }
-
-  static inline const unsigned char *operator &(const EllipticCurvePoint &point) {
-    return &reinterpret_cast<const unsigned char &>(point);
-  }
-
-  static inline unsigned char *operator &(EllipticCurveScalar &scalar) {
-    return &reinterpret_cast<unsigned char &>(scalar);
-  }
-
-  static inline const unsigned char *operator &(const EllipticCurveScalar &scalar) {
-    return &reinterpret_cast<const unsigned char &>(scalar);
-  }
-
-
   mutex random_lock;
 
   static inline void random_scalar(EllipticCurveScalar &res) {
@@ -256,13 +239,6 @@ namespace Crypto {
     EllipticCurvePoint comm;
   };
 
-  struct s_comm_2 {
-    Hash msg;
-    EllipticCurvePoint D;
-    EllipticCurvePoint X;
-    EllipticCurvePoint Y;
-  };
-
   void crypto_ops::generate_signature(const Hash &prefix_hash, const PublicKey &pub, const SecretKey &sec, Signature &sig) {
     lock_guard<mutex> lock(random_lock);
     ge_p3 tmp3;
@@ -308,6 +284,7 @@ namespace Crypto {
     return sc_isnonzero(reinterpret_cast<unsigned char*>(&c)) == 0;
   }
 
+<<<<<<< HEAD
 void crypto_ops::generate_tx_proof(const Hash &prefix_hash, const PublicKey &R, const PublicKey &A, const PublicKey &D, const SecretKey &r, Signature &sig) {
     // sanity check
     ge_p3 R_p3;
@@ -423,6 +400,8 @@ void crypto_ops::generate_tx_proof(const Hash &prefix_hash, const PublicKey &R, 
     return sc_isnonzero(&c2) == 0;
   }
 
+=======
+>>>>>>> parent of b57c58c... first commits
   static void hash_to_ec(const PublicKey &key, ge_p3 &res) {
     Hash h;
     ge_p2 point;
