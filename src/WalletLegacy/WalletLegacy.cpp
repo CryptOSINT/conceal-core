@@ -16,15 +16,11 @@
 #include <time.h>
 
 #include "crypto/crypto.h"
-#include "Common/Base58.h"
 #include "Common/ShuffleGenerator.h"
-#include "Logging/ConsoleLogger.h"
 #include "WalletLegacy/WalletHelper.h"
 #include "WalletLegacy/WalletLegacySerialization.h"
 #include "WalletLegacy/WalletLegacySerializer.h"
 #include "WalletLegacy/WalletUtils.h"
-#include "Common/StringTools.h"
-#include "CryptoNoteCore/CryptoNoteTools.h"
 
 #include "CryptoNoteConfig.h"
 
@@ -1083,13 +1079,6 @@ void WalletLegacy::getAccountKeys(AccountKeys& keys) {
   keys = m_account.getAccountKeys();
 }
 
-bool WalletLegacy::isTrackingWallet() {
-  AccountKeys keys;
-  getAccountKeys(keys);
-  return keys.spendSecretKey == boost::value_initialized<Crypto::SecretKey>();
-}
-
-
 std::vector<TransactionId> WalletLegacy::deleteOutdatedUnconfirmedTransactions() {
   std::lock_guard<std::mutex> lock(m_cacheMutex);
   return m_transactionsCache.deleteOutdatedTransactions();
@@ -1185,6 +1174,7 @@ void WalletLegacy::pushBalanceUpdatedEvents(std::deque<std::unique_ptr<WalletLeg
   }
 }
 
+<<<<<<< HEAD
 Crypto::SecretKey WalletLegacy::getTxKey(Crypto::Hash& txid) {
   TransactionId ti = m_transactionsCache.findTransactionByHash(txid);
   WalletLegacyTransaction transaction;
@@ -1354,4 +1344,6 @@ std::string WalletLegacy::getReserveProof(const uint64_t &reserve, const std::st
 	return ret;
 }
 
+=======
+>>>>>>> parent of 25a9f7d... Merge pull request #51 from ConcealNetwork/dnstools_fix
 } //namespace CryptoNote

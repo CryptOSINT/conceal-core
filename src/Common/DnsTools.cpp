@@ -100,7 +100,7 @@ namespace Common {
 			response = res_query(c_domain, 1, type, query_buffer, sizeof(query_buffer));
 
 			if (response < 0)
-				return false;
+				return 1;
 		}
 
 		ns_initparse(query_buffer, response, &nsMsg);
